@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Radiography Aspirants | Excellence in Learning</title>
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+<body>
+
+    <!-- Professional Top Header -->
+    <header class="app-bar">
+        <div class="header-left">
+            <div class="avatar">RA</div>
+            <div class="user-greet">
+                <span>Welcome back,</span>
+                <h4 id="display-name">Aspirant</h4>
+            </div>
+        </div>
+        <div class="header-right">
+            <div class="icon-btn"><i class="fa-regular fa-bell"></i><span class="dot"></span></div>
+        </div>
+    </header>
+
+    <main id="app-body">
+        <!-- View: Home -->
+        <section id="home-view" class="view">
+            <!-- Course Banner Slider -->
+            <div class="promo-slider">
+                <div class="slide blue-gradient">
+                    <div class="slide-content">
+                        <h2>CRE AIIMS 2024</h2>
+                        <p>Complete Test Series & Notes</p>
+                        <button class="slide-btn">Explore Now</button>
+                    </div>
+                    <img src="https://cdn-icons-png.flaticon.com/512/3588/3588513.png" alt="Xray">
+                </div>
+            </div>
+
+            <div class="section-header">
+                <h3>Popular Courses</h3>
+                <a href="#">See All</a>
+            </div>
+            <div id="course-list" class="course-grid">
+                <!-- Cards will be injected here -->
+            </div>
+        </section>
+
+        <!-- View: Test Series List -->
+        <section id="test-list-view" class="view hidden">
+            <div class="sticky-top">
+                <div class="back-nav" onclick="showView('home-view')">
+                    <i class="fa fa-arrow-left"></i>
+                    <h4>Test Series</h4>
+                </div>
+                <div class="search-bar">
+                    <i class="fa fa-search"></i>
+                    <input type="text" placeholder="Search mock tests...">
+                </div>
+            </div>
+            <div id="test-items-container" class="test-list"></div>
+        </section>
+    </main>
+
+    <!-- Professional Bottom Navigation -->
+    <nav class="bottom-nav">
+        <div class="nav-item active" onclick="showView('home-view')">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+        </div>
+        <div class="nav-item" onclick="showView('store-view')">
+            <i class="fa-solid fa- store"></i>
+            <span>Store</span>
+        </div>
+        <div class="nav-item">
+            <i class="fa-solid fa-comment-dots"></i>
+            <span>Chats</span>
+        </div>
+        <div class="nav-item">
+            <i class="fa-solid fa-user-graduate"></i>
+            <span>Profile</span>
+        </div>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>
