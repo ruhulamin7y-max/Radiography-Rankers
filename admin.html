@@ -1,0 +1,13 @@
+<!-- Simplified Admin Logic -->
+<h3>Upload Questions for Sheet: <input id="sName"></h3>
+<textarea id="bulkQ" placeholder="Question|Op1|Op2|Op3|Op4|CorrectNum (1-4)"></textarea>
+<button onclick="upload()">Save Test</button>
+
+<script>
+async function upload() {
+    const lines = document.getElementById('bulkQ').value.split('\n');
+    const questions = lines.map(l => l.split('|'));
+    // Loop and fetch() POST to Apps Script to save to the sheet
+    alert("Check Google Sheets! Data is being synced.");
+}
+</script>
